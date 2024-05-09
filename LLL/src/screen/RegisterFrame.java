@@ -25,6 +25,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.awt.Color;
+import java.awt.SystemColor;
 
 public class RegisterFrame {
 	private JFrame RegisterFrame;
@@ -72,6 +73,7 @@ public class RegisterFrame {
 	 */
 	private <E> void initialize() {
 		RegisterFrame = new JFrame();
+		RegisterFrame.setBackground(Color.WHITE);
 		RegisterFrame.setTitle("신규회원 등록");
 		RegisterFrame.setBounds(750, 200, 440, 625);
 		RegisterFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -79,6 +81,7 @@ public class RegisterFrame {
 		RegisterFrame.setResizable(false);
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(153, 180, 209));
 		panel.setBounds(0, 0, 424, 586);
 		RegisterFrame.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -134,7 +137,7 @@ public class RegisterFrame {
 		}});
 		
 		JPanel accInfoPanel = new JPanel();
-		accInfoPanel.setBounds(-12, -12, 425, 520);
+		accInfoPanel.setBounds(-11, 0, 414, 508);
 		ButtonPanel.add(accInfoPanel);
 		accInfoPanel.setLayout(null);
 		
@@ -219,7 +222,7 @@ public class RegisterFrame {
 		JLabel onlyNumber = new JLabel("숫자만 입력하세요 !!");
 		onlyNumber.setFont(new Font("돋움체", Font.PLAIN, 12));
 		onlyNumber.setForeground(Color.GRAY);
-		onlyNumber.setBounds(191, 475, 121, 15);
+		onlyNumber.setBounds(191, 465, 121, 25);
 		accInfoPanel.add(onlyNumber);
 		
 		JLabel pwIsDupCheck = new JLabel("비밀번호 확인 :");
@@ -293,7 +296,7 @@ public class RegisterFrame {
 		
 		pwCheck.setFont(new Font("돋움", Font.PLAIN, 12));
 		pwCheck.setForeground(Color.RED);
-		pwCheck.setBounds(112, 339, 197, 15);
+		pwCheck.setBounds(112, 339, 197, 25);
 		accInfoPanel.add(pwCheck);
 	}
 	

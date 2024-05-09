@@ -146,6 +146,7 @@ public class RentalButton extends JPanel {
             }
         });
         
+        // 회원정보 버튼이벤트 추가
         accountInfoButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {

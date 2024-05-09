@@ -30,6 +30,7 @@ import AccountDB.UserInfo;
 import MainProgramFrame.SwingMain;
 
 import javax.swing.border.BevelBorder;
+import java.awt.SystemColor;
 
 public class AccountInfoFrame {
 
@@ -128,68 +129,79 @@ public class AccountInfoFrame {
 		
 		JPanel panel = new JPanel();
 		panel.setForeground(Color.WHITE);
-		panel.setBackground(new Color(192, 192, 192));
+		panel.setBackground(SystemColor.textHighlight);
 		panel.setBounds(0, 0, 986, 613);
 		UserInfoFrame.getContentPane().add(panel, BorderLayout.NORTH);
 		panel.setLayout(null);
 		
 		JPanel displayLabelPanel = new JPanel();
+		displayLabelPanel.setBackground(new Color(0, 0, 0));
 		displayLabelPanel.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
-		displayLabelPanel.setBounds(0, 10, 776, 593);
+		displayLabelPanel.setBounds(12, 10, 764, 593);
 		panel.add(displayLabelPanel);
 		displayLabelPanel.setLayout(null);
 		
 		JLabel accountNumLabel = new JLabel("Account Num :");
+		accountNumLabel.setForeground(new Color(0, 255, 0));
 		accountNumLabel.setBounds(12, 5, 194, 46);
 		displayLabelPanel.add(accountNumLabel);
-		accountNumLabel.setFont(new Font("휴먼편지체", Font.BOLD, 30));
+		accountNumLabel.setFont(new Font("Poor Richard", Font.BOLD, 30));
 		
 		JLabel NameLabel = new JLabel("이름 :");
+		NameLabel.setForeground(new Color(0, 255, 0));
 		NameLabel.setBounds(67, 93, 139, 60);
 		displayLabelPanel.add(NameLabel);
 		NameLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-		NameLabel.setFont(new Font("돋움체", Font.PLAIN, 30));
+		NameLabel.setFont(new Font("돋움체", Font.BOLD, 30));
 		
 		JLabel AddressLabel = new JLabel("주소 :");
-		AddressLabel.setBounds(67, 377, 139, 60);
+		AddressLabel.setForeground(new Color(0, 255, 0));
+		AddressLabel.setBackground(new Color(255, 255, 255));
+		AddressLabel.setBounds(67, 387, 139, 60);
 		displayLabelPanel.add(AddressLabel);
 		AddressLabel.setHorizontalAlignment(SwingConstants.RIGHT);
 		AddressLabel.setFont(new Font("돋움체", Font.BOLD, 30));
 		
 		JLabel IDLabel = new JLabel("아이디 :");
+		IDLabel.setForeground(new Color(0, 255, 0));
 		IDLabel.setBounds(67, 186, 139, 60);
 		displayLabelPanel.add(IDLabel);
 		IDLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-		IDLabel.setFont(new Font("돋움체", Font.PLAIN, 30));
+		IDLabel.setFont(new Font("돋움체", Font.BOLD, 30));
 		
 		JLabel PhoneNumLabel = new JLabel("전화번호 :");
-		PhoneNumLabel.setBounds(26, 471, 180, 60);
+		PhoneNumLabel.setForeground(new Color(0, 255, 0));
+		PhoneNumLabel.setBounds(26, 483, 180, 60);
 		displayLabelPanel.add(PhoneNumLabel);
 		PhoneNumLabel.setHorizontalAlignment(SwingConstants.RIGHT);
 		PhoneNumLabel.setFont(new Font("돋움체", Font.BOLD, 30));
 		
 		JLabel PWLabel = new JLabel("비밀번호 :");
-		PWLabel.setBounds(55, 286, 151, 60);
+		PWLabel.setForeground(new Color(0, 255, 0));
+		PWLabel.setBounds(26, 286, 180, 60);
 		displayLabelPanel.add(PWLabel);
 		PWLabel.setHorizontalAlignment(SwingConstants.RIGHT);
-		PWLabel.setFont(new Font("돋움체", Font.PLAIN, 30));
+		PWLabel.setFont(new Font("돋움체", Font.BOLD, 30));
 		
 		JLabel displayAccountNum = new JLabel(getUserAccNum());
+		displayAccountNum.setForeground(new Color(50, 205, 50));
 		displayAccountNum.setFont(new Font("휴먼편지체", Font.BOLD | Font.ITALIC, 22));
 		displayAccountNum.setHorizontalAlignment(SwingConstants.CENTER);
-		displayAccountNum.setBounds(218, 10, 180, 41);
+		displayAccountNum.setBounds(218, 10, 194, 41);
 		displayLabelPanel.add(displayAccountNum);
 		
 		JLabel showNameLabel = new JLabel(getUserName());
+		showNameLabel.setForeground(new Color(255, 255, 255));
 		showNameLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		showNameLabel.setFont(new Font("휴먼편지체", Font.BOLD, 30));
-		showNameLabel.setBounds(218, 93, 292, 60);
+		showNameLabel.setBounds(218, 93, 347, 60);
 		displayLabelPanel.add(showNameLabel);
 		
 		JLabel showIDLabel = new JLabel(getUserID());
+		showIDLabel.setForeground(new Color(255, 255, 255));
 		showIDLabel.setFont(new Font("휴먼편지체", Font.BOLD, 30));
 		showIDLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		showIDLabel.setBounds(218, 186, 292, 60);
+		showIDLabel.setBounds(218, 186, 347, 60);
 		displayLabelPanel.add(showIDLabel);
 		
 		JLabel pwLabel_NoShow = new JLabel("--- Can't display in public ---");
@@ -201,27 +213,35 @@ public class AccountInfoFrame {
 		displayLabelPanel.add(pwLabel_NoShow);
 		
 		JLabel showAddressLabel = new JLabel(getUserAddress());
+		showAddressLabel.setForeground(new Color(255, 255, 255));
 		showAddressLabel.setFont(new Font("휴먼편지체", Font.BOLD, 30));
 		showAddressLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		showAddressLabel.setBounds(218, 377, 292, 60);
+		showAddressLabel.setBounds(218, 387, 347, 60);
 		displayLabelPanel.add(showAddressLabel);
 		
 		JLabel showPhoneNum = new JLabel(getUserPhoneNum());
+		showPhoneNum.setForeground(new Color(255, 255, 255));
 		showPhoneNum.setHorizontalAlignment(SwingConstants.CENTER);
 		showPhoneNum.setFont(new Font("휴먼편지체", Font.BOLD, 30));
-		showPhoneNum.setBounds(218, 471, 292, 60);
+		showPhoneNum.setBounds(218, 483, 347, 60);
 		displayLabelPanel.add(showPhoneNum);
 		
 		JPanel btnPanel = new JPanel();
+		btnPanel.setBackground(Color.DARK_GRAY);
 		btnPanel.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
-		btnPanel.setBounds(788, 262, 186, 325);
+		btnPanel.setBounds(788, 335, 186, 268);
 		panel.add(btnPanel);
 		btnPanel.setLayout(null);
 		
 		JButton modifyButton = new JButton("수정");
+		modifyButton.setForeground(Color.BLACK);
 		modifyButton.setFont(new Font("휴먼편지체", Font.BOLD, 32));
-		modifyButton.setBounds(12, 46, 162, 78);
+		modifyButton.setBounds(12, 10, 162, 78);
 		btnPanel.add(modifyButton);
+		modifyButton.setEnabled(true);
+		if(LoginLogic.getUserKeyValue().equals("000000")) {
+			modifyButton.setEnabled(false);
+		}
 		modifyButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -232,7 +252,7 @@ public class AccountInfoFrame {
 		
 		JButton deleteButton = new JButton("삭제");
 		deleteButton.setFont(new Font("휴먼편지체", Font.BOLD, 32));
-		deleteButton.setBounds(12, 131, 162, 78);
+		deleteButton.setBounds(12, 98, 162, 78);
 		btnPanel.add(deleteButton);
 		deleteButton.setEnabled(false);
 		if(LoginLogic.getUserKeyValue().equals("000000")) {
@@ -249,7 +269,7 @@ public class AccountInfoFrame {
 		
 		JButton cancleButton = new JButton("취소");
 		cancleButton.setFont(new Font("휴먼편지체", Font.BOLD, 32));
-		cancleButton.setBounds(12, 215, 162, 73);
+		cancleButton.setBounds(12, 186, 162, 73);
 		btnPanel.add(cancleButton);
 		cancleButton.addActionListener(new ActionListener() {
 			@Override
