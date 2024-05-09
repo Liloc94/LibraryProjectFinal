@@ -216,7 +216,7 @@ public class RegisterFrame {
 		
 		JLabel welcomeImg = new JLabel("");
 		welcomeImg.setIcon(new ImageIcon(RegisterFrame.class.getResource("/image/welcome (1).jpg")));
-		welcomeImg.setBounds(12, 10, 401, 86);
+		welcomeImg.setBounds(12, 0, 401, 86);
 		accInfoPanel.add(welcomeImg);
 		
 		JLabel onlyNumber = new JLabel("숫자만 입력하세요 !!");
